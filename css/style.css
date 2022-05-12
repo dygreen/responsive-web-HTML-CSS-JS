@@ -223,7 +223,6 @@ section{
   margin-left: 2%;
   height: 500px;
   border: 2px solid var(--black-color);
-  background: var(--white-color);
   box-sizing: border-box;
   position: relative;
 }
@@ -252,6 +251,7 @@ section{
   letter-spacing: -1px;
   line-height: 25px;
   text-indent: 25px;
+  text-align: center;
   color: #666;
   margin: 20px;
 }
@@ -313,7 +313,6 @@ section{
   margin-top: 15%;
   height: 500px;
   border: 2px solid var(--black-color);
-  background: var(--white-color);
   box-sizing: border-box;
   position: relative;
 }
@@ -343,6 +342,7 @@ section{
   letter-spacing: -1px;
   line-height: 25px;
   text-indent: 25px;
+  text-align: center;
   color: #666;
   margin: 20px;
 }
@@ -469,7 +469,6 @@ section{
   margin-top: 15%;
   height: 500px;
   border: 2px solid var(--black-color);
-  background: var(--white-color);
   box-sizing: border-box;
   position: relative;
 }
@@ -498,6 +497,7 @@ section{
   letter-spacing: -1px;
   line-height: 25px;
   text-indent: 25px;
+  text-align: center;
   color: #666;
   margin: 20px;
 }
@@ -606,26 +606,39 @@ section{
 .section7 .image img{height: auto;}
 
 /* lastest post */
-.section8{
-  width: 30%;
-  height: 300px;
-}
+.section8{width: 30%;}
 
 .section8 .title{
   font-family: 'Playfair Display', serif;
   font-size: 40px;
   font-size: 2.500rem;
+  text-align: center;
+  margin-bottom: 3%;
 }
 
 .section8 .posts{
-  background: 
+  height: 200px;
+  background: #ff8080;
+  color: var(--white-color);
+  border: 2px solid var(--black-color);
+  font-size: 18px;
+  font-size: 1.125rem;
+  padding: 5%;
+  padding-top: 10%;
+  position: relative;
 }
 
+.section8 .posts li{
+  margin-bottom: 6%;
+  list-style: square inside;
+  border-bottom: 1px dotted var(--white-color);
+  transition: all 0.2s;
+}
+.section8 .posts li:hover{background: var(--red-color);}
 
 /* popular post */
 .section9{
   width: 30%;
-  height: 300px;
   margin: 0 2%;
 }
 
@@ -633,16 +646,400 @@ section{
   font-family: 'Playfair Display', serif;
   font-size: 40px;
   font-size: 2.500rem;
+  text-align: center;
+  margin-bottom: 3%;
 }
 
-/* top searched */
-.section10{
-  width: 30%;
-  height: 300px;
+.section9 .posts{
+  height: 200px;
+  background: #a688f6;
+  color: var(--white-color);
+  border: 2px solid var(--black-color);
+  font-size: 18px;
+  font-size: 1.125rem;
+  padding: 5%;
+  padding-top: 10%;
+  position: relative;
 }
+
+.section9 .posts li{
+  margin-bottom: 6%;
+  list-style: square inside;
+  border-bottom: 1px dotted var(--white-color);
+  transition: all 0.2s;
+}
+.section9 .posts li:hover{background: var(--main-color);}
+
+/* top searched */
+.section10{width: 30%;}
 
 .section10 .title{
   font-family: 'Playfair Display', serif;
   font-size: 40px;
   font-size: 2.500rem;
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+.section10 .search{
+  background: #80ceff;
+  border: 2px solid var(--black-color);
+  height: 200px;
+  padding: 5%;
+  padding-top: 10%;
+}
+
+.section10 input[type=search]{ /* 검색창 */
+  width: 100%;
+  height: 30px;
+  border: 2px solid var(--blue-color);
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.section10 .search ul.terms{  /* 단어 */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 145px;
+  overflow: scroll;
+  display: none; /* -> jQuery */
+}
+
+.section10 .search ul li{  /* 단어 박스 */
+  padding: 3% 5%;
+  margin: 1%;
+  background: var(--blue-color);
+  transition: all 0.2s;
+}
+.section10 .search ul li:hover{
+  background: #006eb3;
+  color: var(--white-color);
+}
+
+/* ********** FOOTER ********** */
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  height: 80px;
+  border-top: 2px solid var(--black-color);
+}
+
+footer img{height: 50px;}
+
+footer p{
+  line-height: 50px;
+  text-transform: uppercase;
+  margin-left: 5%;
+}
+
+
+/* ==================== TABLET ==================== */
+/* 768~1199범위의 해상도 */
+@media screen and (min-width: 768px) and (max-width: 1199px){
+  #wrap{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  /* ********** HEADER ********** */
+  #pc_header{
+    width: 100%;
+    height: 130px;
+    flex-flow: column wrap;
+    border-bottom: none;
+  }
+  
+  #pc_header .logo{
+    width: 100%;
+    height: 75px;
+  }
+  
+  #pc_header .logo img{ /* 로고 */
+    height: 60px;
+  }
+  
+  #pc_header .gnb{
+    width: 100%;
+    border-top: 2px solid var(--black-color);
+    border-bottom: 2px solid var(--black-color);
+  }
+
+  #pc_header .gnbmenu{height: 50px;}
+  
+  #pc_header .gnbmenu>li:not(.sns) a:before,
+  #pc_header .gnbmenu>li:not(.sns) a:after{ /* hover 네모 */
+    bottom: 17px;
+    width: 7px;
+    height: 7px;
+  }
+  
+  #pc_header .gnbmenu>li:not(.sns){
+    padding: 1.4% 3.3% 1.4% 6%;
+    border-left: 2px solid var(--black-color);
+  }
+  #pc_header .gnbmenu>li:first-of-type{border-left: none;}
+
+  #pc_header .gnbmenu>li.sns{
+    /* padding: 15px 25px; */
+    padding: 1.25% 2%;
+  }
+  
+  /* ********** VISUAL ********** */
+  #visual{height: 380px;}
+  
+  #visual .left_box, .right_box{
+    font-size: 16px;
+    font-size: 1.000rem;
+    height: 160px;
+  }
+  
+  #visual .main_box h2{ /* 가운데 텍스트 */
+    font-size: 40px;
+    font-size: 2.500rem;
+    text-align: right;
+    margin-right: 5%;
+  }
+  
+  #visual .main_box h1{ /* 가운데 텍스트: webtrend */
+    font-size: 70px;
+    font-size: 4.375rem;
+  }
+
+  /* ********** SECTION ********** */
+  section{max-width: 100%;}
+
+  /* flat design */
+  /* 1 */
+  .section1{
+    max-width: 350px;
+    margin-left: 2%;
+  }
+
+  .section1:hover p.title{
+    border-top: 5px solid var(--black-color);
+    color: var(--black-color);
+  }
+
+  .section1 img{
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+  }
+  .section1:hover img{transform: scale(1);}
+
+  /* 2 */
+  .section2{
+    max-width: 350px;
+    height: 410px;
+    margin-right: 2%;
+  }
+
+  .section2 .text_box{padding: 5%;}
+
+  .section2 .text_box .main{ /* 메인 텍스트: is */
+    font-size: 25px;
+    font-size: 1.563rem;
+  }
+
+  .section2 .text_box .main span{
+    font-size: 35px;
+    font-size: 2.188rem;
+  }
+
+  .section2 .text_box .sub{ /* 서브 텍스트 */
+    font-size: 16px;
+    font-size: 1.000rem;
+  }
+
+  .section2_in{height: 410px;}
+  .section2:hover .section2_in:after{display: none;}
+  .section2:hover .text_box .more{display: none;}
+
+  /* material design */
+  /* 3 */
+  .section3{
+    max-width: 350px;
+    height: 410px;
+    margin-left: 2%;
+  }
+  
+  .section3 .text_box{padding: 5%;}
+  
+  .section3 .text_box .main{ /* 메인 텍스트: is */
+    font-size: 25px;
+    font-size: 1.563rem;
+  }
+  
+  .section3 .text_box .main span{
+    font-size: 30px;
+    font-size: 1.875rem;
+  }
+  
+  .section3 .text_box .sub{ /* 서브 텍스트 */
+    font-size: 16px;
+    font-size: 1.000rem;
+  }
+  
+  .section3_in{height: 410px;}
+  .section3:hover .section3_in:after{display: none;}
+  .section3:hover .text_box .more{display: none;}
+  
+  /* 4 */
+  .section4{
+    max-width: 350px;
+    margin-right: 2%;
+  }
+  
+  .section4:hover p.title{
+    border-top: 5px solid var(--black-color);
+    color: var(--black-color);
+  }
+  
+  .section4 img{
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+  }
+  .section4:hover img{transform: scale(1);}
+
+  
+  /* card design */
+  /* 5 */
+  .section5{
+    max-width: 350px;
+    margin-left: 2%;
+  }
+
+  .section5:hover p.title{
+    border-top: 5px solid var(--black-color);
+    color: var(--black-color);
+  }
+
+  .section5 img{
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+  }
+  .section5:hover img{transform: scale(1);}
+
+  /* 6 */
+  .section6{
+    max-width: 350px;
+    height: 410px;
+    margin-right: 2%;
+  }
+
+  .section6 .text_box{padding: 5%;}
+
+  .section6 .text_box .main{ /* 메인 텍스트: is */
+    font-size: 25px;
+    font-size: 1.563rem;
+  }
+
+  .section6 .text_box .main span{
+    font-size: 35px;
+    font-size: 2.188rem;
+  }
+
+  .section6 .text_box .sub{ /* 서브 텍스트 */
+    font-size: 16px;
+    font-size: 1.000rem;
+  }
+
+  .section6_in{height: 410px;}
+  .section6:hover .section6_in:after{display: none;}
+  .section6:hover .text_box .more{display: none;}
+
+  /* gallery */
+  .section7 .gallery img{ /* 모니터 이미지 */
+    height: 550px;
+  }
+
+  .section7 .image{ /* 사이트 이미지 */
+    height: 510px;
+  }
+
+  .section7 .image a{
+    width: 40%;
+    margin-top: 30px;
+  }
+
+  .section7 .image img{height: auto;}
+
+  /* lastest post */
+  .section8{width: 45%; margin: 5% 1.5%;}
+  .section8 .posts{padding-top: 5%;}
+  .section8 .posts li:hover{background: transparent;}
+
+  /* popular post */
+  .section9{width: 45%; margin: 5% 1.5%;}
+  .section9 .posts{padding-top: 5%;}
+  .section9 .posts li:hover{background: transparent;}
+
+  /* top searched */
+  .section10{width: 93%;}
+  .section10 .title{margin-bottom: 2%;}
+
+  .section10 .search{
+    padding: 5%;
+    padding-top: 6%;
+  }
+
+  .section10 input[type=search]{ /* 검색창 */
+    width: 80%;
+    height: 40px;
+    margin-left: 10%;
+    font-size: 20px;
+    font-size: 1.250rem;
+  }
+
+  .section10 .search ul li{  /* 단어 박스 */
+    padding: 2% 5%;
+    width: 80%;
+    margin-left: 5%;
+    font-size: 16px;
+    font-size: 1.000rem;
+  }
+}
+
+
+/* ==================== MOBILE ==================== */
+/* 767이하~ 범위의 해상도 */
+@media screen and (max-width: 767px){
+  #wrap{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  /* ********** HEADER ********** */
+  #pc_header{display: none;}
+  #mo_header{display: block;}
+
+  #mo_header .mo_top{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    border-top: 2px solid var(--black-color);
+    border-bottom: 2px solid var(--black-color);
+  }
+
+  #mo_header .mo_top .logo{margin: 35%;}
+  #mo_header .mo_top .logo img{height: 60px;} /* 로고 */
+  #mo_header .mo_top .toggle_btn{
+    font-size: 50px;
+    background: var(--main-color);
+    color: var(--white-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 1%;
+    cursor: pointer;
+  }
 }
